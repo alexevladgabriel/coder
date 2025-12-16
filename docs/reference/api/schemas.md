@@ -711,6 +711,12 @@
     },
     "rate_limit": 0,
     "retention": 0
+  },
+  "proxy": {
+    "cert_file": "string",
+    "enabled": true,
+    "key_file": "string",
+    "listen_addr": "string"
   }
 }
 ```
@@ -720,6 +726,27 @@
 | Name     | Type                                               | Required | Restrictions | Description |
 |----------|----------------------------------------------------|----------|--------------|-------------|
 | `bridge` | [codersdk.AIBridgeConfig](#codersdkaibridgeconfig) | false    |              |             |
+| `proxy`  | [codersdk.AIProxyConfig](#codersdkaiproxyconfig)   | false    |              |             |
+
+## codersdk.AIProxyConfig
+
+```json
+{
+  "cert_file": "string",
+  "enabled": true,
+  "key_file": "string",
+  "listen_addr": "string"
+}
+```
+
+### Properties
+
+| Name          | Type    | Required | Restrictions | Description |
+|---------------|---------|----------|--------------|-------------|
+| `cert_file`   | string  | false    |              |             |
+| `enabled`     | boolean | false    |              |             |
+| `key_file`    | string  | false    |              |             |
+| `listen_addr` | string  | false    |              |             |
 
 ## codersdk.APIAllowListTarget
 
@@ -2873,6 +2900,12 @@ CreateWorkspaceRequest provides options for creating a new workspace. Only one o
         },
         "rate_limit": 0,
         "retention": 0
+      },
+      "proxy": {
+        "cert_file": "string",
+        "enabled": true,
+        "key_file": "string",
+        "listen_addr": "string"
       }
     },
     "allow_workspace_renames": true,
@@ -3404,6 +3437,12 @@ CreateWorkspaceRequest provides options for creating a new workspace. Only one o
       },
       "rate_limit": 0,
       "retention": 0
+    },
+    "proxy": {
+      "cert_file": "string",
+      "enabled": true,
+      "key_file": "string",
+      "listen_addr": "string"
     }
   },
   "allow_workspace_renames": true,
